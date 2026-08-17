@@ -31,3 +31,7 @@ arquivo.
 
 O seletor de semanas, a paginação, o progresso e as URLs são gerados
 automaticamente a partir de `reports`.
+
+Os slides podem usar `image` para prints ou `evidence` para painéis de evidência
+com métricas, resultados e link verificável. A aplicação abre por padrão o report
+mais recente.

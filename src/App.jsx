@@ -11,8 +11,9 @@ function readInitialState(report) {
 }
 
 function App() {
-  const [reportId, setReportId] = useState(() => new URLSearchParams(window.location.search).get('week') ?? reports[0].id)
-  const report = reports.find((item) => item.id === reportId) ?? reports[0]
+  const latestReport = reports.at(-1)
+  const [reportId, setReportId] = useState(() => new URLSearchParams(window.location.search).get('week') ?? latestReport.id)
+  const report = reports.find((item) => item.id === reportId) ?? latestReport
   const [current, setCurrent] = useState(() => readInitialState(report))
   const [isFullscreen, setIsFullscreen] = useState(false)
 

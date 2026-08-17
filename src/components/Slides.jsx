@@ -1,5 +1,33 @@
-import { ArrowRight, Check, GitBranch, Sparkles } from 'lucide-react'
+import { ArrowRight, Check, ExternalLink, GitBranch, Sparkles } from 'lucide-react'
 import { ScreenshotFrame } from './ScreenshotFrame.jsx'
+
+function EvidencePanel({ evidence }) {
+  return (
+    <div className="evidence-panel">
+      <div className="evidence-panel__topline">
+        <span>{evidence.badge}</span>
+        {evidence.href && (
+          <a href={evidence.href} target="_blank" rel="noreferrer" aria-label={`Abrir evidência: ${evidence.badge}`}>
+            Ver no GitHub <ExternalLink size={14} />
+          </a>
+        )}
+      </div>
+      <div className="evidence-panel__metric">
+        <strong>{evidence.headline}</strong>
+        <span>{evidence.subheadline}</span>
+      </div>
+      <div className="evidence-panel__items">
+        {evidence.items.map((item) => (
+          <div key={item.label}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+          </div>
+        ))}
+      </div>
+      <p>{evidence.footer}</p>
+    </div>
+  )
+}
 
 export function CoverSlide({ report }) {
   return (
@@ -61,8 +89,8 @@ export function DetailSlide({ slide }) {
         )}
       </div>
       <div className="slide-visual">
-        <ScreenshotFrame image={slide.image} />
-        <span className="visual-caption"><i /> Evidência da entrega</span>
+        {slide.evidence ? <EvidencePanel evidence={slide.evidence} /> : <ScreenshotFrame image={slide.image} />}
+        <span className="visual-caption"><i /> Evidência verificável da entrega</span>
       </div>
     </article>
   )
