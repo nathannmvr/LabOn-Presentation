@@ -89,8 +89,19 @@ export function DetailSlide({ slide }) {
         )}
       </div>
       <div className="slide-visual">
-        {slide.evidence ? <EvidencePanel evidence={slide.evidence} /> : <ScreenshotFrame image={slide.image} />}
-        <span className="visual-caption"><i /> Evidência verificável da entrega</span>
+        {slide.evidence ? <EvidencePanel evidence={slide.evidence} /> : slide.images ? (
+          <div className="screenshot-comparison">
+            {slide.images.map((image) => (
+              <figure key={image.src}>
+                <ScreenshotFrame image={image} />
+                <figcaption>{image.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        ) : <ScreenshotFrame image={slide.image} />}
+        <span className="visual-caption"><i /> {slide.caption ?? 'Evidência verificável da entrega'}</span>
+        {!slide.evidence && <span className="screenshot-hint">Toque ou clique no print para ampliar</span>}
+        {slide.source && <a className="evidence-source" href={slide.source.href} target="_blank" rel="noreferrer">{slide.source.label} <ExternalLink size={14} /></a>}
       </div>
     </article>
   )

@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-09-09T12:38:17.518Z",
+  "baseURL": "http://127.0.0.1:5173",
+  "records": [
+    {
+      "file": "primeiro-acesso.png",
+      "route": "/change-password-required",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "API real local",
+      "description": "Login real redireciona para troca obrigatória; API bloqueia consulta de usuários com HTTP 403."
+    }
+  ]
+}

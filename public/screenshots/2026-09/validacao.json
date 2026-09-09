@@ -1,0 +1,77 @@
+{
+    "date":  "2026-09-09",
+    "sourceCommit":  "c243e2e106292fdc5a25072756c21cb5fff5a423",
+    "frontend":  {
+                     "filesPassed":  89,
+                     "testsPassed":  387,
+                     "build":  "passed"
+                 },
+    "e2e":  {
+                "firstRun":  {
+                                 "environment":  "Vite dev, React StrictMode",
+                                 "passed":  149,
+                                 "failed":  18
+                             },
+                "retry":  {
+                              "environment":  "Vite preview, production build",
+                              "selection":  "--last-failed",
+                              "passed":  18,
+                              "failed":  0
+                          },
+                "totalDistinctScenariosPassed":  167,
+                "singleAllGreenRun":  false
+            },
+    "presentation":  {
+                         "lint":  "passed",
+                         "build":  "passed",
+                         "reports":  4,
+                         "slidesPerViewport":  28,
+                         "viewports":  [
+                                           "1440x900",
+                                           "375x812"
+                                       ],
+                         "layoutFindings":  0
+                     },
+    "captures":  [
+                     {
+                         "file":  "acesso-negado.png",
+                         "sha256":  "468bb1fda3fc6ba4b6c89ea432cff0272376e73f605e658cac7516258b8e2abe",
+                         "bytes":  38786
+                     },
+                     {
+                         "file":  "cadastro-usuario.png",
+                         "sha256":  "cbb75d18f812af0c5c59eb4d94a662524239f59946b67cd8cebfd22739183f23",
+                         "bytes":  42710
+                     },
+                     {
+                         "file":  "consulta-recuperada.png",
+                         "sha256":  "4423549e999a16f0a38845f9cb43817681890397db01d8d67b9b0231d67a09a7",
+                         "bytes":  64512
+                     },
+                     {
+                         "file":  "erro-recuperavel.png",
+                         "sha256":  "aaa42fd19e40ebe0c836a9a9058b1dd450a8e25a3bdf6d9c5dbf3a8ee7581165",
+                         "bytes":  41448
+                     },
+                     {
+                         "file":  "primeiro-acesso.png",
+                         "sha256":  "6f1047c791438927e9ca652fad1c9198432abaf08de8d01a7d6858d4fd8a4d22",
+                         "bytes":  23960
+                     },
+                     {
+                         "file":  "recuperacao-senha.png",
+                         "sha256":  "92ee2010b03a8d72868b15ae53ac50e9dd69a600d4590b22551a9055b1e853fb",
+                         "bytes":  36288
+                     },
+                     {
+                         "file":  "usuarios-desktop.png",
+                         "sha256":  "4423549e999a16f0a38845f9cb43817681890397db01d8d67b9b0231d67a09a7",
+                         "bytes":  64512
+                     },
+                     {
+                         "file":  "usuarios-mobile.png",
+                         "sha256":  "46b976f386dbe20c58bd9001ed1896c169bbcfd8227eb7da17264c458c33c1a5",
+                         "bytes":  31043
+                     }
+                 ]
+}

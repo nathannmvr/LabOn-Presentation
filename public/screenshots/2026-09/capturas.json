@@ -1,0 +1,76 @@
+{
+  "capturedAt": "2026-09-09T12:41:20.616Z",
+  "baseURL": "http://127.0.0.1:5173",
+  "records": [
+    {
+      "file": "recuperacao-senha.png",
+      "route": "/reset-password",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "API real local",
+      "description": "Solicitação real retorna 202 e mostra confirmação neutra; token recebido no SMTP de teste não aparece no print."
+    },
+    {
+      "file": "cadastro-usuario.png",
+      "route": "/create-account",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "API real local",
+      "description": "Cadastro preenchido com cidade real e sigla de curso ES; envio subsequente validado com HTTP 201 e normalização do payload."
+    },
+    {
+      "file": "usuarios-desktop.png",
+      "route": "/admin/users",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "API real local",
+      "description": "Lista real de usuários do banco isolado, com data civil e dados cadastrados durante a validação."
+    },
+    {
+      "file": "usuarios-mobile.png",
+      "route": "/admin/users",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "API real local",
+      "description": "Mesma lista em 375 px, organizada em cartões; página rolada até os registros, sem transbordamento horizontal."
+    },
+    {
+      "file": "erro-recuperavel.png",
+      "route": "/admin/users",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "Falha HTTP simulada no navegador; sessão real",
+      "description": "HTTP 500 controlado na consulta de usuários; interface real oferece nova tentativa e oculta detalhes internos."
+    },
+    {
+      "file": "consulta-recuperada.png",
+      "route": "/admin/users",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "API real local",
+      "description": "Após Tentar novamente, consulta real à API recupera a lista sem novo login."
+    },
+    {
+      "file": "acesso-negado.png",
+      "route": "/admin/users",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "mode": "Falha HTTP simulada no navegador; sessão real",
+      "description": "HTTP 403 controlado mostra falta de permissão e preserva sessão e rota."
+    }
+  ]
+}

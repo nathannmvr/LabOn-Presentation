@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   Workflow,
 } from 'lucide-react'
+import { report20260909 } from './report-2026-09-09.js'
 
 export const reports = [
   {
@@ -425,4 +426,5 @@ export const reports = [
       title: 'LabOn está no ar.',
     },
   },
+  report20260909,
 ]

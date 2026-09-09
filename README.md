@@ -35,3 +35,15 @@ automaticamente a partir de `reports`.
 Os slides podem usar `image` para prints ou `evidence` para painéis de evidência
 com métricas, resultados e link verificável. A aplicação abre por padrão o report
 mais recente.
+
+## Entrega de 26/08 a 09/09/2026
+
+A quarta entrega reúne as quatro frentes concluídas, 55 tarefas e oito capturas
+do LabOn em execução local. Abre por padrão ou com `?week=2026-09-09`.
+
+Os prints podem ser ampliados por clique ou toque. O slide responsivo compara
+desktop e celular; os cenários de erro simulados estão identificados nas legendas.
+
+Consulte o [roteiro e os resultados de validação](public/screenshots/2026-09/README.md).
+As novas entregas também podem usar `images` para comparar prints e `source` para
+ligar uma evidência complementar.

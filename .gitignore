@@ -13,3 +13,4 @@ Thumbs.db
 # Capturas temporárias de validação visual
 check-*.png
 preview*.png
+.impeccable/review/
