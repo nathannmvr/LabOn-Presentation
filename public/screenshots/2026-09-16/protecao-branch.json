@@ -1,0 +1,17 @@
+{
+    "observedAt":  "2026-09-15T19:18:51.5731656Z",
+    "rulesetId":  9464959,
+    "name":  "develop",
+    "enforcement":  "active",
+    "requiredChecks":  [
+                           "Frontend quality",
+                           "Backend quality",
+                           "Workflow contracts",
+                           "Scan frontend on linux/amd64",
+                           "Scan frontend on linux/arm64",
+                           "Scan backend on linux/amd64",
+                           "Scan backend on linux/arm64",
+                           "Code quality baseline",
+                           "Quality gate"
+                       ]
+}

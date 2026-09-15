@@ -1,0 +1,86 @@
+{
+  "capturedAt": "2026-09-15T19:17:40.937Z",
+  "baseURL": "http://127.0.0.1:5173",
+  "records": [
+    {
+      "file": "conta-menu.png",
+      "url": "http://127.0.0.1:5173/admin/profile",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mode": "Interface local; sessão e respostas de API sintéticas",
+      "description": "Conta administrativa e menu abertos, sem importação, InterLab ou Labon Pro."
+    },
+    {
+      "file": "home-admin.png",
+      "url": "http://127.0.0.1:5173/admin/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mode": "Interface local; sessão e respostas de API sintéticas",
+      "description": "Home administrativa com seis atalhos operacionais e consultas carregadas."
+    },
+    {
+      "file": "detalhe-apos-recarregar.png",
+      "url": "http://127.0.0.1:5173/admin/history/loan?id=701",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mode": "Interface local; sessão e respostas de API sintéticas",
+      "description": "Detalhe aberto por link e recarregado mantendo id=701 e retorno explícito para todos os empréstimos."
+    },
+    {
+      "file": "home-mentor.png",
+      "url": "http://127.0.0.1:5173/mentor/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mode": "Interface local; sessão e respostas de API sintéticas",
+      "description": "Home do Mentor com atalhos de turma, solicitações, empréstimos e produtos; rolada para mostrar todos os atalhos."
+    },
+    {
+      "file": "home-mentor-mobile.png",
+      "url": "http://127.0.0.1:5173/mentor/",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "mode": "Interface local; sessão e respostas de API sintéticas",
+      "description": "Home do Mentor em 375 px, rolada até os atalhos, sem transbordamento horizontal."
+    },
+    {
+      "file": "manual-wiki.png",
+      "url": "https://github.com/ifpebj-ti/lab-solos/wiki/Manual-do-Usuario",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "Página pública do GitHub Wiki",
+      "description": "Índice do manual publicado no GitHub Wiki, com versão e orientações para os três perfis."
+    },
+    {
+      "file": "qualidade-green.png",
+      "url": "https://github.com/ifpebj-ti/lab-solos/actions/runs/35008036822",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "Página pública do GitHub Actions; execução real registrada",
+      "description": "Execução 35008036822 do Container CI com resultado Success."
+    },
+    {
+      "file": "qualidade-red.png",
+      "url": "https://github.com/ifpebj-ti/lab-solos/actions/runs/35000986662",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "mode": "Página pública do GitHub Actions; execução real registrada",
+      "description": "Execução 35000986662 do Container CI com resultado Failure."
+    }
+  ]
+}

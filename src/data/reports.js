@@ -11,6 +11,7 @@ import {
   Workflow,
 } from 'lucide-react'
 import { report20260909 } from './report-2026-09-09.js'
+import { report20260916 } from './report-2026-09-16.js'
 
 export const reports = [
   {
@@ -427,4 +428,5 @@ export const reports = [
     },
   },
   report20260909,
+  report20260916,
 ]
