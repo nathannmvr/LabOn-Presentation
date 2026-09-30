@@ -1,0 +1,338 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-09-30T01:00:27.024Z",
+  "comp": ".impeccable/mocks/variation-1.png",
+  "direction": "eefa7623",
+  "breakpoint": "1672x941",
+  "artifact": null,
+  "phase": "hero",
+  "phases": {
+    "comps": {
+      "status": "closed",
+      "openedAt": "2026-09-30T01:00:27.024Z",
+      "closedAt": "2026-09-30T01:07:09.262Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "3 comps, 1 approved",
+        "approved": ".impeccable/mocks/variation-1.png",
+        "at": "2026-09-30T01:07:09.261Z"
+      },
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-09-30T01:07:09.282Z",
+      "closedAt": "2026-09-30T01:10:03.776Z",
+      "attempts": 4,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "12 regions, 0 plates, 9 text regions measured",
+        "at": "2026-09-30T01:10:03.776Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-09-30T01:10:03.776Z",
+      "closedAt": "2026-09-30T01:10:07.300Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no plates owed",
+        "at": "2026-09-30T01:10:07.300Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "open",
+      "openedAt": "2026-09-30T01:10:07.300Z",
+      "closedAt": null,
+      "attempts": 12,
+      "notes": [],
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "region wordmark is missing (detail 0%, structure 60%): the comp shows material the build does not",
+          "control navigation drifts to 62% (structure 58%, color 90%): its chrome differs from the comp's; open .impeccable/review/diff/hero/regions/navigation.png and match the border, fill, radius, chevron or arrow, and label size"
+        ],
+        "summary": "hero 80% (drift)",
+        "score": 0.7971,
+        "verdict": "drift",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "C:/Users/Nathan/Documents/Labon/LabOn-Presentation/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "wordmark missing 52%",
+          "metric-three-label drift 62%",
+          "navigation drift 62%"
+        ],
+        "worstIds": [
+          "wordmark",
+          "metric-three-label",
+          "navigation"
+        ],
+        "worstCrops": [
+          {
+            "id": "wordmark",
+            "verdict": "missing",
+            "score": {
+              "overall": 0.518,
+              "structure": 0.5956,
+              "color": 0.8807,
+              "colorIntersection": 0.8341,
+              "paletteMatch": 0.9058,
+              "detail": 0,
+              "detailRaw": 0,
+              "detailAdded": 0.0938,
+              "bands": 0
+            },
+            "file": ".impeccable/review/diff/hero/regions/wordmark.png"
+          },
+          {
+            "id": "metric-three-label",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.6162,
+              "structure": 0.4673,
+              "color": 0.8301,
+              "colorIntersection": 0.7778,
+              "paletteMatch": 0.8583,
+              "detail": 0.5291,
+              "detailRaw": 0.5655,
+              "detailAdded": 0.0729,
+              "bands": 0.9571
+            },
+            "file": ".impeccable/review/diff/hero/regions/metric-three-label.png"
+          },
+          {
+            "id": "navigation",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.62,
+              "structure": 0.5757,
+              "color": 0.8979,
+              "colorIntersection": 0.8587,
+              "paletteMatch": 0.919,
+              "detail": 0.2332,
+              "detailRaw": 0.353,
+              "detailAdded": 0.2396,
+              "bands": 0
+            },
+            "file": ".impeccable/review/diff/hero/regions/navigation.png"
+          }
+        ],
+        "regionVerdicts": {
+          "wordmark": "missing",
+          "accent-rule": "match",
+          "headline": "drift",
+          "metric-one-value": "drift",
+          "metric-one-label": "drift",
+          "metric-two-value": "drift",
+          "metric-two-label": "drift",
+          "metric-three-value": "drift",
+          "metric-three-label": "drift",
+          "metric-dividers": "match",
+          "date": "drift",
+          "navigation": "drift"
+        },
+        "at": "2026-09-30T01:25:33.344Z"
+      },
+      "forced": null,
+      "readingsSeen": {
+        "text metric-three-label: cap height 13.9px in the build, 24.5px in the comp (-43%); set font-size so the cap height renders at 24.5px": 1
+      },
+      "records": 1,
+      "history": [
+        {
+          "at": "2026-09-30T01:18:30.442Z",
+          "score": 0.7745,
+          "worstIds": [
+            "headline",
+            "metric-three-label",
+            "wordmark"
+          ],
+          "regionVerdicts": {
+            "wordmark": "drift",
+            "accent-rule": "match",
+            "headline": "drift",
+            "metric-one-value": "drift",
+            "metric-one-label": "drift",
+            "metric-two-value": "drift",
+            "metric-two-label": "drift",
+            "metric-three-value": "drift",
+            "metric-three-label": "drift",
+            "metric-dividers": "match",
+            "date": "drift",
+            "navigation": "missing"
+          },
+          "artifactHash": "56da54229bc9"
+        },
+        {
+          "at": "2026-09-30T01:18:52.667Z",
+          "score": 0.7753,
+          "worstIds": [
+            "headline",
+            "navigation",
+            "metric-three-label"
+          ],
+          "regionVerdicts": {
+            "wordmark": "drift",
+            "accent-rule": "match",
+            "headline": "drift",
+            "metric-one-value": "drift",
+            "metric-one-label": "drift",
+            "metric-two-value": "drift",
+            "metric-two-label": "drift",
+            "metric-three-value": "drift",
+            "metric-three-label": "drift",
+            "metric-dividers": "match",
+            "date": "drift",
+            "navigation": "drift"
+          },
+          "artifactHash": "56da54229bc9"
+        },
+        {
+          "at": "2026-09-30T01:19:23.937Z",
+          "score": 0.7865,
+          "worstIds": [
+            "metric-two-value",
+            "metric-two-label",
+            "metric-three-label"
+          ],
+          "regionVerdicts": {
+            "wordmark": "missing",
+            "accent-rule": "match",
+            "headline": "drift",
+            "metric-one-value": "drift",
+            "metric-one-label": "contradicted",
+            "metric-two-value": "contradicted",
+            "metric-two-label": "contradicted",
+            "metric-three-value": "contradicted",
+            "metric-three-label": "contradicted",
+            "metric-dividers": "drift",
+            "date": "missing",
+            "navigation": "missing"
+          },
+          "artifactHash": "56da54229bc9"
+        },
+        {
+          "at": "2026-09-30T01:24:07.207Z",
+          "score": 0.7748,
+          "worstIds": [
+            "metric-two-label",
+            "metric-one-label",
+            "metric-two-value"
+          ],
+          "regionVerdicts": {
+            "wordmark": "drift",
+            "accent-rule": "match",
+            "headline": "drift",
+            "metric-one-value": "contradicted",
+            "metric-one-label": "missing",
+            "metric-two-value": "contradicted",
+            "metric-two-label": "missing",
+            "metric-three-value": "contradicted",
+            "metric-three-label": "missing",
+            "metric-dividers": "drift",
+            "date": "missing",
+            "navigation": "missing"
+          },
+          "artifactHash": "56da54229bc9"
+        },
+        {
+          "at": "2026-09-30T01:24:32.832Z",
+          "score": 0.7679,
+          "worstIds": [
+            "metric-two-label",
+            "metric-one-label",
+            "metric-two-value"
+          ],
+          "regionVerdicts": {
+            "wordmark": "drift",
+            "accent-rule": "match",
+            "headline": "drift",
+            "metric-one-value": "contradicted",
+            "metric-one-label": "missing",
+            "metric-two-value": "contradicted",
+            "metric-two-label": "missing",
+            "metric-three-value": "contradicted",
+            "metric-three-label": "missing",
+            "metric-dividers": "drift",
+            "date": "missing",
+            "navigation": "missing"
+          },
+          "artifactHash": "56da54229bc9"
+        },
+        {
+          "at": "2026-09-30T01:25:33.344Z",
+          "score": 0.7971,
+          "worstIds": [
+            "wordmark",
+            "metric-three-label",
+            "navigation"
+          ],
+          "regionVerdicts": {
+            "wordmark": "missing",
+            "accent-rule": "match",
+            "headline": "drift",
+            "metric-one-value": "drift",
+            "metric-one-label": "drift",
+            "metric-two-value": "drift",
+            "metric-two-label": "drift",
+            "metric-three-value": "drift",
+            "metric-three-label": "drift",
+            "metric-dividers": "match",
+            "date": "drift",
+            "navigation": "drift"
+          },
+          "artifactHash": "56da54229bc9"
+        }
+      ]
+    },
+    "sections": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "motion": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "responsive": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    },
+    "review": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": null,
+  "plates": {}
+}

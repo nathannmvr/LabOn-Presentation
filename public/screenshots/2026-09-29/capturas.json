@@ -1,0 +1,12 @@
+{
+  "data": "2026-09-29",
+  "repositorio": "lab-solos",
+  "revisao": "2105328",
+  "ambiente": "preview local do build de produção com respostas sintéticas",
+  "capturas": [
+    { "arquivo": "login-desktop.png", "viewport": "1440x900", "sessao": "sem sessão" },
+    { "arquivo": "login-mobile.png", "viewport": "375x812", "sessao": "sem sessão" },
+    { "arquivo": "home-admin.png", "viewport": "1440x900", "sessao": "Administrador sintético" },
+    { "arquivo": "catalogo-mentor.png", "viewport": "1440x900", "sessao": "Mentor e produto sintéticos" }
+  ]
+}

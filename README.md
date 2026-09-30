@@ -72,3 +72,15 @@ A revisão visual independente aprovou os 18 screenshots da semana 5 com
 veredito **SHIP**, incluindo a rolagem dos slides 3–7 no celular. A captura
 mobile do próprio LabOn conserva alguns rótulos truncados; essa limitação
 está registrada no roteiro de captura.
+
+## Entrega de 16/09 a 30/09/2026
+
+A sexta entrega está em `?week=2026-09-30`. O report reúne a reformulação
+visual, a documentação da primeira entrega, remediações CodeQL, o modelo de
+ameaças e a revisão do scan de imagens. São seis slides de conteúdo, além da
+capa e do encerramento. O recorte reflete o histórico disponível em 29/09;
+eventos de 30/09 devem ser acrescentados após ocorrerem.
+
+Quatro capturas da interface reformulada podem ser ampliadas no report. Elas
+vieram do frontend local com sessão e dados sintéticos. Consulte a
+[procedência das capturas](public/screenshots/2026-09-29/README.md).

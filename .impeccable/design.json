@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T00:00:00-03:00",
+  "title": "Design System: LabOn Presentation",
+  "extensions": {
+    "colorMeta": {
+      "institutional-green": {
+        "role": "primary",
+        "displayName": "Verde institucional",
+        "tonalRamp": ["oklch(15% 0.09 145)", "oklch(25% 0.09 145)", "oklch(35% 0.09 145)", "oklch(45% 0.09 145)", "oklch(55% 0.09 145)", "oklch(68% 0.09 145)", "oklch(82% 0.09 145)", "oklch(95% 0.09 145)"]
+      },
+      "charcoal-ink": {
+        "role": "neutral",
+        "displayName": "Carvão",
+        "tonalRamp": ["oklch(15% 0.01 190)", "oklch(25% 0.01 190)", "oklch(35% 0.01 190)", "oklch(45% 0.01 190)", "oklch(55% 0.01 190)", "oklch(68% 0.01 190)", "oklch(82% 0.01 190)", "oklch(95% 0.01 190)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel claro",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(68% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Tinta secundária",
+        "tonalRamp": ["oklch(15% 0.01 155)", "oklch(25% 0.01 155)", "oklch(35% 0.01 155)", "oklch(45% 0.01 155)", "oklch(55% 0.01 155)", "oklch(68% 0.01 155)", "oklch(82% 0.01 155)", "oklch(95% 0.01 155)"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Linha suave",
+        "tonalRamp": ["oklch(15% 0.01 155)", "oklch(25% 0.01 155)", "oklch(35% 0.01 155)", "oklch(45% 0.01 155)", "oklch(55% 0.01 155)", "oklch(68% 0.01 155)", "oklch(82% 0.01 155)", "oklch(95% 0.01 155)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Título da capa na projeção." },
+      "headline": { "displayName": "Headline", "purpose": "Título de cada detalhe." },
+      "body": { "displayName": "Body", "purpose": "Descrição curta da entrega." },
+      "label": { "displayName": "Label", "purpose": "Seção e índice antes do título." }
+    },
+    "shadows": [
+      { "name": "captura-elevada", "value": "0 13px 35px rgba(26,49,31,.12)", "purpose": "Separar a captura de tela do papel." }
+    ],
+    "motion": [
+      { "name": "slide-horizontal", "value": "transform 420ms cubic-bezier(.2,.8,.2,1)", "purpose": "Avanço horizontal entre slides; removido em prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "detail-compact", "value": "900px" },
+      { "name": "mobile", "value": "640px" },
+      { "name": "desktop", "value": "641px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão de navegação",
+      "kind": "button",
+      "refersTo": "nav-button",
+      "description": "Seta discreta para avançar ou retornar entre slides.",
+      "html": "<button class=\"ds-nav-button\" aria-label=\"Próximo slide\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></button>",
+      "css": ".ds-nav-button{border:0;background:transparent;color:var(--ink,#182727);padding:8px;display:grid;place-items:center;cursor:pointer}.ds-nav-button:hover{color:var(--green,#135b2d)}.ds-nav-button:focus-visible{outline:3px solid var(--green,#135b2d);outline-offset:4px}.ds-nav-button:disabled{opacity:.3;cursor:default}"
+    },
+    {
+      "name": "Seletor de entrega",
+      "kind": "input",
+      "refersTo": "report-selector",
+      "description": "Escolha do período apresentada junto à marca no topo.",
+      "html": "<select class=\"ds-report-selector\" aria-label=\"Selecionar entrega\"><option>Entrega de setembro 2026</option></select>",
+      "css": ".ds-report-selector{max-width:270px;color:var(--ink,#182727);background:transparent;border:0;border-bottom:1px solid var(--line,#c8d1cb);padding:6px 2px;font:14px 'Albert Sans',sans-serif;cursor:pointer}.ds-report-selector:focus-visible{outline:3px solid var(--green,#135b2d);outline-offset:4px}@media(max-width:640px){.ds-report-selector{max-width:174px;font-size:11px}}"
+    },
+    {
+      "name": "Moldura de captura",
+      "kind": "card",
+      "description": "Moldura elevada para evidência visual, com barra de navegador.",
+      "html": "<div class=\"ds-screenshot-frame\"><div class=\"ds-browser-chrome\"><span></span><span></span><span></span></div><div class=\"ds-screenshot-content\">Captura da entrega</div></div>",
+      "css": ".ds-screenshot-frame{background:#fff;overflow:hidden;border:1px solid #cbd2ce;box-shadow:0 13px 35px rgba(26,49,31,.12)}.ds-browser-chrome{height:24px;background:#e9eeea;border-bottom:1px solid #cbd2ce;display:flex;align-items:center;padding-left:11px;gap:5px}.ds-browser-chrome span{display:block;width:6px;height:6px;border-radius:50%;background:#a7b8aa}.ds-browser-chrome span:first-child{background:var(--green,#135b2d)}.ds-screenshot-content{min-height:120px;display:grid;place-items:center;color:var(--muted,#52605b);font:14px 'Albert Sans',sans-serif}"
+    },
+    {
+      "name": "Painel de evidência",
+      "kind": "card",
+      "description": "Número destacado, procedência e detalhes verificáveis sem sombra.",
+      "html": "<div class=\"ds-evidence-panel\"><div class=\"ds-evidence-top\"><span>RESULTADO</span><a href=\"#fonte\">Ver no GitHub ↗</a></div><strong class=\"ds-evidence-metric\">42</strong><span class=\"ds-evidence-subtitle\">entregas verificadas</span><div class=\"ds-evidence-item\"><span>Fonte</span><strong>Relatório do projeto</strong></div></div>",
+      "css": ".ds-evidence-panel{border-top:1px solid var(--green,#135b2d);border-bottom:1px solid var(--line,#c8d1cb);padding:24px 0;background:#f8f8f8;font-family:'Albert Sans',sans-serif}.ds-evidence-top{display:flex;justify-content:space-between;gap:16px;color:var(--green,#135b2d);font-size:15px;font-weight:700}.ds-evidence-top a{color:var(--green,#135b2d);font-size:13px;text-decoration:none}.ds-evidence-top a:hover{text-decoration:underline}.ds-evidence-top a:focus-visible{outline:3px solid var(--green,#135b2d);outline-offset:4px}.ds-evidence-metric{display:block;margin-top:24px;color:var(--green,#135b2d);font-size:clamp(68px,7.5vw,125px);line-height:.95;letter-spacing:-.055em}.ds-evidence-subtitle{color:var(--ink,#182727);font-size:clamp(20px,1.75vw,29px)}.ds-evidence-item{display:flex;flex-direction:column;gap:4px;border-top:1px solid var(--line,#c8d1cb);padding:12px 0;margin-top:24px}.ds-evidence-item span{color:var(--muted,#52605b);font-size:13px}.ds-evidence-item strong{color:var(--ink,#182727);font-size:16px}"
+    },
+    {
+      "name": "Métrica de capa",
+      "kind": "custom",
+      "description": "Número verde em grande escala com rótulo direto.",
+      "html": "<div class=\"ds-cover-stat\"><strong>42</strong><span>entregas</span></div>",
+      "css": ".ds-cover-stat{display:flex;flex-direction:column;align-items:flex-start;font-family:'Albert Sans',sans-serif}.ds-cover-stat strong{color:var(--green,#135b2d);font-size:clamp(80px,10vw,170px);line-height:1;font-weight:800;letter-spacing:-.065em;font-variant-numeric:tabular-nums}.ds-cover-stat span{color:#1a2225;font-size:clamp(23px,2.45vw,42px);margin-top:-6px;line-height:1.14}@media(max-width:640px){.ds-cover-stat{flex-direction:row;align-items:baseline;gap:12px;border-top:1px solid var(--line,#c8d1cb);padding:8px 0}.ds-cover-stat strong{font-size:52px;min-width:76px}.ds-cover-stat span{font-size:19px;margin-top:0}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Pôster de Congresso",
+    "overview": "O sistema trata cada entrega como um pôster acadêmico projetado: assunto, números e evidência recebem escala, enquanto o campo claro dá tempo para a leitura à distância. A voz visual é precisa e sóbria, com hierarquia forte e poucos sinais institucionais.\n\nO conteúdo se organiza por espaço e regras finas. O verde marca números, fontes e ação; as capturas mantêm suas cores e ocupam uma grande área útil. O painel escuro com cartões e bordas luminosas foi abandonado na direção aprovada.",
+    "keyCharacteristics": [
+      "Campo claro contínuo, tinta carvão e verde institucional com uso contido.",
+      "Títulos pesados, números grandes e linhas curtas de texto para projeção.",
+      "Evidências amplas, com fonte verificável e opção de ampliar capturas.",
+      "Navegação discreta, contador legível e movimento horizontal breve."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Reserve o verde para hierarquia, prova e interação; ele não preenche grandes blocos.", "section": "colors" },
+      { "name": "The Projected Readability Rule", "body": "Títulos e métricas dominam a distância; explicações permanecem curtas e subordinadas à evidência.", "section": "typography" },
+      { "name": "The Evidence Lift Rule", "body": "A elevação identifica a captura; texto, métricas e painel de evidência permanecem planos.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do dar ao título, às métricas e à captura escala suficiente para uma apresentação projetada.",
+      "Do manter links de fonte e legendas junto da evidência apresentada.",
+      "Do usar verde em números, regras e estados interativos com moderação.",
+      "Do respeitar o empilhamento e a barra de navegação de 62px até 640px."
+    ],
+    "donts": [
+      "Don't reintroduzir o painel escuro com cartões ou bordas luminosas rejeitado na direção aprovada.",
+      "Don't colocar sombras em painéis de texto ou métricas; a sombra observada pertence à captura.",
+      "Don't comprimir as capturas em miniaturas quando houver espaço útil para exibi-las amplamente."
+    ]
+  }
+}

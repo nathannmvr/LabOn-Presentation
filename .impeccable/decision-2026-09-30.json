@@ -1,0 +1,133 @@
+{
+  "title": "Escolha a direção visual do LabOn Presentation",
+  "question": "Qual referência deve orientar a nova apresentação para projetor? Escolha uma direção ou peça outra rodada.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Caderno de campo",
+      "kicker": "DIREÇÃO PROPOSTA",
+      "lineage": "cadernos de observação e registros de laboratório",
+      "thesis": "Cada slide é uma página de observação: resultado grande, prova legível e notas precisas.",
+      "palette": ["#f7f8f4", "#192b29", "#176b52", "#d9e7dd"],
+      "materials": ["papel branco técnico", "marcação de caderno", "fotografias do produto sem filtros"],
+      "viewport": "Capa como folha aberta em fundo claro: período pequeno no alto, título grande à esquerda e números da entrega à direita; a navegação fica discreta no rodapé.",
+      "risk": "Linhas de caderno muito delicadas podem desaparecer na projeção; a hierarquia de texto precisa sustentar o slide sozinha.",
+      "raised": [
+        { "from": "crouwel-grid-specimen", "raise": "A grade serve ao alinhamento dos dados e prints, com títulos em escala de apresentação." },
+        { "from": "clouds-storms-auroras-iridescent-cloud-edge", "raise": "Margens generosas deixam a evidência respirar mesmo sob luz ambiente." },
+        { "from": "vernacular-ephemera-cassette-j-card", "raise": "Datas e números usam uma coluna estável, como registros de campo." }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "label": "Pôster de congresso",
+      "kicker": "ESCOLHA IMPECCABLE",
+      "lineage": "pôsteres de pesquisa e comunicação científica",
+      "thesis": "A entrega aparece como uma descoberta apresentada a uma banca, com uma prova visual dominante por tela.",
+      "palette": ["#ffffff", "#17382f", "#13845b", "#d6ebdf"],
+      "materials": ["superfície branca", "faixas de cor institucionais", "prints em alta resolução"],
+      "viewport": "Título e resultado tomam a metade superior; abaixo, uma imagem ou número principal ocupa o campo central com fonte e período claros.",
+      "risk": "É a referência mais familiar para a audiência e pode parecer genérica se a composição repetir sempre o mesmo pôster.",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "challenger-crouwel-grid-specimen",
+      "label": "Grade tipográfica",
+      "verdict": "competitive",
+      "lineage": "espécimes tipográficos de Wim Crouwel",
+      "thesis": "Títulos monumentais e uma grade visível transformam o avanço dos slides em uma sequência de peças gráficas.",
+      "palette": ["#ffffff", "#152a32", "#127a62", "#d5e6e1"],
+      "materials": ["grade de construção", "tipografia geométrica", "prints em campo branco"],
+      "viewport": "Uma palavra ou número domina a capa; a grade continua pelos slides e ancora imagem, texto e controle em posições rigorosas.",
+      "case": "A identificação acadêmica e a leitura em projetor são fortes; os slides densos exigem disciplina para não perder contexto.",
+      "risk": "A tipografia pode dominar os prints se todos os slides mantiverem a mesma escala heroica.",
+      "comp": ".impeccable/mocks/decision/challenger-crouwel-grid-specimen.png",
+      "hero": "https://impeccable.style/worlds/cards/crouwel-grid-specimen-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/crouwel-grid-specimen.webp"
+    },
+    {
+      "id": "challenger-cloud",
+      "label": "Borda iridescente",
+      "verdict": "declined",
+      "lineage": "nuvens iridescentes",
+      "thesis": "Um campo branco quase vazio recebe uma faixa cromática tênue para indicar o slide ativo.",
+      "palette": ["#ffffff", "#44545b", "#c7e5dc", "#ddd5ee"],
+      "materials": ["branco de nuvem", "faixa espectral", "grande margem"],
+      "viewport": "A capa deixa o título no centro de um campo branco, com a cor confinada à borda.",
+      "case": "A luz funciona no projetor, mas a metáfora não ajuda a explicar o trabalho do LabOn.",
+      "risk": "A cor tênue pode sumir sob luz ambiente.",
+      "kept": "Margens amplas e silêncio visual ao redor das evidências.",
+      "hero": "https://impeccable.style/worlds/cards/clouds-storms-auroras-iridescent-cloud-edge-hero.webp"
+    },
+    {
+      "id": "challenger-cassette",
+      "label": "Ficha dobrada",
+      "verdict": "declined",
+      "lineage": "encarte de fita cassete",
+      "thesis": "As entregas formam lados de uma ficha com datas e itens alinhados.",
+      "palette": ["#f9faf8", "#1d4f7b", "#444b54", "#d7e0e6"],
+      "materials": ["papel pautado", "anotação azul", "dobras"],
+      "viewport": "A capa mostra uma ficha dobrada com o período como lombada.",
+      "case": "Os registros são úteis, mas a referência musical não corresponde à audiência nem ao produto.",
+      "risk": "Linhas finas e letra manuscrita prejudicam a leitura projetada.",
+      "kept": "Colunas estáveis para números, datas e procedência.",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-cassette-j-card-hero.webp"
+    },
+    {
+      "id": "challenger-cracktro",
+      "label": "Tela de bitmap",
+      "verdict": "declined",
+      "lineage": "aberturas de programas antigos",
+      "thesis": "A sequência de entregas avança em camadas de texto digital.",
+      "palette": ["#101820", "#f1f4f0", "#f5b94f"],
+      "materials": ["bitmap", "pontos luminosos", "tela escura"],
+      "viewport": "Título em pixels sobre uma tela escura com camadas em movimento.",
+      "case": "A superfície escura contraria o uso em projetor com luz ambiente.",
+      "risk": "Prints e texto perdem fidelidade e leitura à distância.",
+      "kept": "Um único nível de ênfase claramente dominante.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-cracktro-scroller-queue-hero.webp"
+    },
+    {
+      "id": "challenger-film",
+      "label": "Mesa de edição",
+      "verdict": "declined",
+      "lineage": "mesa de montagem de filme",
+      "thesis": "Cada entrega ocupa um quadro de uma faixa cronológica.",
+      "palette": ["#171a19", "#f4f2e9", "#d96531"],
+      "materials": ["película", "marca de seleção", "janela branca"],
+      "viewport": "Uma faixa horizontal de quadros escolhe a entrega ativa.",
+      "case": "A cronologia é útil, mas a faixa escura e os quadros pequenos disputam espaço com os prints.",
+      "risk": "As imagens ficam pequenas para projeção.",
+      "kept": "O estado atual deve ser identificável de imediato.",
+      "hero": "https://impeccable.style/worlds/cards/operate-a-cutting-bench-select-rail-hero.webp"
+    },
+    {
+      "id": "challenger-origami",
+      "label": "Dobra de papel",
+      "verdict": "declined",
+      "lineage": "sequência de dobradura orizuru",
+      "thesis": "Uma folha muda de forma a cada etapa do report.",
+      "palette": ["#c84832", "#f8f3e9", "#292823"],
+      "materials": ["papel vermelho", "vinco", "ponto de etapa"],
+      "viewport": "A capa apresenta uma folha dobrada que se abre ao avançar.",
+      "case": "A mecânica de dobra não explica as entregas e ocuparia a área destinada às evidências.",
+      "risk": "O movimento vira o assunto principal da apresentação.",
+      "kept": "Transições entre slides devem comunicar sequência sem distrair da leitura.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-orizuru-crane-sequence-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "comp", "toggle": true },
+  "canon": true,
+  "canonCard": {
+    "label": "Apresentação institucional",
+    "thesis": "Slides brancos com título, imagem e conclusão em uma grade convencional, executados com alto acabamento.",
+    "palette": ["#ffffff", "#17342e", "#1d7654", "#e7eee9"],
+    "materials": ["fundo branco", "tipografia sem serifa", "separadores discretos"],
+    "viewport": "Capa com título central e faixa institucional; slides internos com título em cima, evidência grande e fonte no rodapé.",
+    "risk": "Familiar para a banca, mas menos memorável que as direções acima.",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}

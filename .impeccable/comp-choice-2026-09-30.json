@@ -1,0 +1,43 @@
+{
+  "title": "Escolha a composição dos slides",
+  "question": "A direção Pôster de congresso está definida. Qual destas três composições deve guiar a capa e a hierarquia dos demais slides? Você pode escrever um ajuste no campo de observação.",
+  "options": [
+    {
+      "id": "comp-a",
+      "label": "Título em toda a largura",
+      "kicker": "COMPOSIÇÃO 1",
+      "lineage": "pôster de congresso em fundo claro",
+      "thesis": "O título apresenta a entrega; três números formam uma linha de leitura ampla.",
+      "palette": ["#ffffff", "#192326", "#176b52", "#e4eee8"],
+      "materials": ["campo branco", "tipo grande", "régua verde"],
+      "viewport": "Título atravessa a metade superior. As três métricas ocupam colunas iguais abaixo; o período e a navegação ficam nos cantos.",
+      "risk": "Menos espaço para texto de contexto na capa.",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "comp-b",
+      "label": "Um resultado dominante",
+      "kicker": "COMPOSIÇÃO 2",
+      "lineage": "pôster de congresso em fundo claro",
+      "thesis": "O principal resultado ganha escala; título e outros números o contextualizam.",
+      "palette": ["#ffffff", "#192326", "#176b52", "#e4eee8"],
+      "materials": ["campo branco", "tipo grande", "régua verde"],
+      "viewport": "Título à esquerda, 235 testes E2E em grande escala à direita e duas métricas secundárias na base.",
+      "risk": "A ênfase em E2E pode parecer maior que a importância das outras frentes.",
+      "comp": ".impeccable/mocks/variation-2.png"
+    },
+    {
+      "id": "comp-c",
+      "label": "Entrega numerada",
+      "kicker": "COMPOSIÇÃO 3",
+      "lineage": "pôster de congresso em fundo claro",
+      "thesis": "O número da entrega conduz a capa e cria uma sequência reconhecível entre períodos.",
+      "palette": ["#ffffff", "#192326", "#176b52", "#e4eee8"],
+      "materials": ["campo branco", "tipo grande", "régua verde"],
+      "viewport": "06 ocupa a esquerda; título à direita; três métricas formam uma linha na base.",
+      "risk": "O número não pode competir com o assunto da entrega.",
+      "comp": ".impeccable/mocks/variation-3.png"
+    }
+  ],
+  "steer": true
+}

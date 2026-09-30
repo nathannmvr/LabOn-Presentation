@@ -1,4 +1,4 @@
-import { ArrowRight, Check, ExternalLink, GitBranch, Sparkles } from 'lucide-react'
+import { ArrowRight, Check, ExternalLink, GitBranch } from 'lucide-react'
 import { ScreenshotFrame } from './ScreenshotFrame.jsx'
 
 function EvidencePanel({ evidence }) {
@@ -32,25 +32,20 @@ function EvidencePanel({ evidence }) {
 export function CoverSlide({ report }) {
   return (
     <article className="slide slide--cover">
-      <div className="cover-grid" aria-hidden="true" />
-      <div className="cover-orbit cover-orbit--one" aria-hidden="true" />
-      <div className="cover-orbit cover-orbit--two" aria-hidden="true" />
       <div className="cover-copy">
-        <span className="eyebrow"><Sparkles size={14} /> {report.eyebrow}</span>
-        <p className="period">{report.period}</p>
         <h1>{report.title.split('\n').map((line) => <span key={line}>{line}</span>)}</h1>
-        <p className="cover-summary">{report.summary}</p>
       </div>
       <div className="cover-stats">
         {report.stats.map((stat) => (
           <div className="cover-stat" key={stat.label}>
-            <span>{stat.label}</span>
-            <strong>{stat.value}</strong>
+            <strong>{stat.value.split(' ')[0]}</strong>
+            <span>{stat.value.includes('E2E') ? 'testes E2E' : stat.value.split(' ').slice(1).join(' ') || stat.label}</span>
             <small>{stat.detail}</small>
           </div>
         ))}
       </div>
-      <div className="cover-mark" aria-hidden="true"><span>ON</span></div>
+      <p className="cover-period">{report.id === '2026-09-30' ? '16 – 30 setembro 2026' : report.period}</p>
+      <p className="cover-summary">{report.summary}</p>
     </article>
   )
 }
@@ -90,7 +85,7 @@ export function DetailSlide({ slide }) {
       </div>
       <div className="slide-visual">
         {slide.evidence ? <EvidencePanel evidence={slide.evidence} /> : slide.images ? (
-          <div className="screenshot-comparison">
+          <div className={`screenshot-comparison${slide.balancedImages ? ' screenshot-comparison--balanced' : ''}`}>
             {slide.images.map((image) => (
               <figure key={image.src}>
                 <ScreenshotFrame image={image} />

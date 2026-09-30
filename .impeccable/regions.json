@@ -1,0 +1,16 @@
+{
+  "regions": [
+    { "id": "wordmark", "kind": "text", "grid": "A0:B0", "note": "small uppercase LABON at top left" },
+    { "id": "accent-rule", "kind": "chrome", "grid": "A0:A9", "note": "thin vertical forest green rule at left" },
+    { "id": "headline", "kind": "text", "grid": "A2:J5", "note": "enormous charcoal bold two-line headline" },
+    { "id": "metric-one-value", "kind": "text", "grid": "A6:C7", "note": "large green 63" },
+    { "id": "metric-one-label", "kind": "text", "grid": "A8:C8", "note": "surfaces label" },
+    { "id": "metric-two-value", "kind": "text", "grid": "E6:G7", "note": "large green 235" },
+    { "id": "metric-two-label", "kind": "text", "grid": "E8:G8", "note": "end to end tests label" },
+    { "id": "metric-three-value", "kind": "text", "grid": "H6:J7", "note": "large green 25" },
+    { "id": "metric-three-label", "kind": "text", "grid": "H8:J8", "note": "threats label" },
+    { "id": "metric-dividers", "kind": "chrome", "grid": "D6:H8", "note": "two slender gray vertical dividers between metrics" },
+    { "id": "date", "kind": "text", "grid": "A9:C9", "note": "small gray date at bottom left" },
+    { "id": "navigation", "kind": "control", "grid": "I9:J9", "note": "small previous/next chevrons and slide index at bottom right" }
+  ]
+}

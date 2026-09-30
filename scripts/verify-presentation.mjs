@@ -46,10 +46,10 @@ try {
     await page.goto(`${baseURL}/?week=${latest.id}&slide=1`)
     await expect(page.locator('.slide-page[aria-hidden="false"] h2')).toHaveText(latest.slides[0].title)
     const popupPromise = page.waitForEvent('popup')
-    await page.locator('.slide-page[aria-hidden="false"] .screenshot-link').click()
+    await page.locator('.slide-page[aria-hidden="false"] .screenshot-link').first().click()
     const popup = await popupPromise
     await popup.waitForLoadState('domcontentloaded')
-    assert.ok(popup.url().endsWith(latest.slides[0].image.src))
+    assert.ok(popup.url().endsWith((latest.slides[0].image ?? latest.slides[0].images[0]).src))
     await popup.close()
     await page.keyboard.press('Home')
     await expect(page).toHaveURL(/slide=0$/)
@@ -58,7 +58,7 @@ try {
     await page.keyboard.press('End')
     await expect(page).toHaveURL(new RegExp(`slide=${latest.slides.length + 1}$`))
     for (const asset of ['README.md', 'capturas.json']) {
-      assert.equal((await page.request.get(`${baseURL}/screenshots/${latest.id}/${asset}`)).status(), 200)
+      assert.equal((await page.request.get(`${baseURL}/screenshots/${latest.assetFolder ?? latest.id}/${asset}`)).status(), 200)
     }
     await page.close()
   }
