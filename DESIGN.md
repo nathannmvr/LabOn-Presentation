@@ -134,6 +134,7 @@ A geometria é retangular: controles transparentes, painéis sem cantos arredond
 
 - **Style:** Marca pequena à esquerda, seletor de entrega à direita, contador com algarismos tabulares e setas discretas no rodapé.
 - **Mobile:** Barra inferior de 62px separada por uma linha suave; navegação mantém avanço e retorno.
+- **Cabeçalho móvel:** Faixa opaca de 64px mantém a marca e o seletor legíveis durante a rolagem dos slides de detalhe.
 
 ### Screenshot Frame
 

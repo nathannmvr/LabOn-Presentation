@@ -13,6 +13,7 @@ import {
 import { report20260909 } from './report-2026-09-09.js'
 import { report20260916 } from './report-2026-09-16.js'
 import { report20260930 } from './report-2026-09-30.js'
+import { report20261007 } from './report-2026-10-07.js'
 
 export const reports = [
   {
@@ -431,4 +432,5 @@ export const reports = [
   report20260909,
   report20260916,
   report20260930,
+  report20261007,
 ]

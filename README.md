@@ -84,3 +84,28 @@ eventos de 30/09 devem ser acrescentados após ocorrerem.
 Quatro capturas da interface reformulada podem ser ampliadas no report. Elas
 vieram do frontend local com sessão e dados sintéticos. Consulte a
 [procedência das capturas](public/screenshots/2026-09-29/README.md).
+
+## Entrega de 30/09 a 07/10/2026
+
+A sétima semana abre por padrão ou em `?week=2026-10-07`. São 12 slides,
+incluindo capa e encerramento, sobre a validação dos dois relatórios de
+segurança e as cinco issues criadas no LabOn: #436 a #440.
+
+O conteúdo distingue seis falsos positivos, três problemas confirmados e os
+enquadramentos de CORS, IDs sequenciais e identificação do servidor. A issue
+de recuperação de senha trata da falta de controle de abuso, preservando a
+resposta genérica 202. As issues continuam abertas no recorte de 07/10 e não
+representam correções já implementadas.
+
+Esta semana usa os painéis de evidência existentes e links para cada issue,
+sem prints de dados pessoais ou credenciais. A [validação completa e suas
+limitações](public/reports/2026-10-07/validacao.md) acompanha a apresentação.
+O IDOR está confirmado no código revisado, com reprodução autenticada atual
+em produção pendente porque a credencial fornecida retornou 401.
+
+O conteúdo está em `src/data/report-2026-10-07.js`. Para conferir a navegação
+de todas as semanas e capturar a nova entrega em desktop e celular, execute
+`node scripts/verify-presentation.mjs` com o servidor em `127.0.0.1:5174`.
+
+Validação da nova entrega: lint e build aprovados, sete reports e 57 slides
+por viewport (1440 × 900 e 375 × 812), com `layoutFindings: []`.

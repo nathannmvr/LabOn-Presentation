@@ -12,6 +12,7 @@ const output = path.resolve('.impeccable/review')
 await mkdir(output, { recursive: true })
 const failures = []
 const latest = reports.at(-1)
+const screenshotReport = reports.findLast(report => report.slides.some(slide => slide.image || slide.images?.length))
 try {
   for (const viewport of [{ width: 1440, height: 900 }, { width: 375, height: 812 }]) {
     const page = await browser.newPage({ viewport, reducedMotion: 'reduce' })
@@ -45,20 +46,34 @@ try {
     assert.deepEqual(errors, [])
     await page.goto(`${baseURL}/?week=${latest.id}&slide=1`)
     await expect(page.locator('.slide-page[aria-hidden="false"] h2')).toHaveText(latest.slides[0].title)
-    const popupPromise = page.waitForEvent('popup')
-    await page.locator('.slide-page[aria-hidden="false"] .screenshot-link').first().click()
-    const popup = await popupPromise
-    await popup.waitForLoadState('domcontentloaded')
-    assert.ok(popup.url().endsWith((latest.slides[0].image ?? latest.slides[0].images[0]).src))
-    await popup.close()
+    if (screenshotReport) {
+      const screenshotIndex = screenshotReport.slides.findIndex(slide => slide.image || slide.images?.length)
+      const screenshotSlide = screenshotReport.slides[screenshotIndex]
+      await page.goto(`${baseURL}/?week=${screenshotReport.id}&slide=${screenshotIndex + 1}`)
+      const popupPromise = page.waitForEvent('popup')
+      await page.locator('.slide-page[aria-hidden="false"] .screenshot-link').first().click()
+      const popup = await popupPromise
+      await popup.waitForLoadState('domcontentloaded')
+      assert.ok(popup.url().endsWith((screenshotSlide.image ?? screenshotSlide.images[0]).src))
+      await popup.close()
+      for (const asset of ['README.md', 'capturas.json']) {
+        const response = await page.request.get(`${baseURL}/screenshots/${screenshotReport.assetFolder ?? screenshotReport.id}/${asset}`)
+        assert.equal(response.status(), 200)
+        assert.ok(!(await response.text()).includes('<!doctype html>'), `Missing screenshot provenance: ${asset}`)
+      }
+    }
+    await page.goto(`${baseURL}/?week=${latest.id}&slide=1`)
+    await expect(page.locator('.slide-page[aria-hidden="false"] h2')).toHaveText(latest.slides[0].title)
     await page.keyboard.press('Home')
     await expect(page).toHaveURL(/slide=0$/)
     await page.keyboard.press('ArrowRight')
     await expect(page).toHaveURL(/slide=1$/)
     await page.keyboard.press('End')
     await expect(page).toHaveURL(new RegExp(`slide=${latest.slides.length + 1}$`))
-    for (const asset of ['README.md', 'capturas.json']) {
-      assert.equal((await page.request.get(`${baseURL}/screenshots/${latest.assetFolder ?? latest.id}/${asset}`)).status(), 200)
+    for (const document of latest.documents ?? []) {
+      const response = await page.request.get(new URL(document, baseURL).href)
+      assert.equal(response.status(), 200)
+      assert.ok((await response.text()).startsWith('# '), `Missing evidence document: ${document}`)
     }
     await page.close()
   }
