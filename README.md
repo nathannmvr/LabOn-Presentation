@@ -1,5 +1,19 @@
 # LabOn Presentation
 
+## Entrega de 08/10 a 14/10/2026
+
+A oitava entrega abre por padrão ou em `?week=2026-10-14`. São dez slides,
+incluindo capa e encerramento, sobre as cinco correções de segurança, testes,
+documentação e publicação da release 2.7.4. O conteúdo usa a identidade visual
+e os componentes existentes.
+
+As PRs #441 e #442 foram integradas e as issues #436–#440 estão encerradas
+no GitHub. O aceite do ambiente publicado (T030/CA-027) ainda consta pendente
+no plano, distinção preservada na apresentação.
+
+Conteúdo em `src/data/report-2026-10-14.js`, com
+[fontes e limites](public/reports/2026-10-14/validacao.md).
+
 Apresentação web dos reports semanais do LabOn, construída com React e Vite.
 
 ## Executar
