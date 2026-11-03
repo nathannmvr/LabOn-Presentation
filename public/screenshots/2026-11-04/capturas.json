@@ -1,0 +1,465 @@
+{
+  "data": "2026-11-03",
+  "interface": "lab-solos c642854c44ff36709e75aeb3f25a3d865640eb8c",
+  "modoInterface": "Build de produção local, servida por vite preview",
+  "arquivosInterface": [
+    "/assets/index-BkPJV3Wi.js",
+    "/assets/index-CMI32W4H.css"
+  ],
+  "ambiente": "http://127.0.0.1:4173",
+  "natureza": "Interface compilada local com API simulada e dados sintéticos. Não é validação real de backend ou produção.",
+  "capturas": [
+    {
+      "arquivo": "acesso-01-login.png",
+      "papel": "Visitante",
+      "etapa": "Abrir a tela de entrada e escolher criar conta",
+      "rota": "/",
+      "sha256": "308982c56a3751cdabd461a5f4d236c458d541e0c3b929611175629fb27bed15",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "acesso-02-cadastro.png",
+      "papel": "Mentorado solicitante",
+      "etapa": "Preencher perfil, dados acadêmicos e e-mail do mentor responsável",
+      "rota": "/create-account",
+      "sha256": "a41ecb356d71e492d666218112484e59fe4a8d7b7cc5b47819dd1b11038f5f0f",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "acesso-03-pendente.png",
+      "papel": "Mentorado solicitante",
+      "etapa": "Cadastro enviado; aguardar decisão do responsável",
+      "rota": "/",
+      "sha256": "9f3c5223577f6dac2f0b3cb4f9eae65f54a2d8b3cb7a97d166ee900deb1841f7",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "acesso-04-analisar.png",
+      "papel": "Mentor responsável",
+      "etapa": "Consultar Solicitações de Cadastro e conferir a pessoa vinculada",
+      "rota": "/mentor/users-request",
+      "sha256": "4c3a2d6bf2dc72d025e178ac9647809265bd4caaa21110a74209b9a724969860",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "acesso-05-aprovado.png",
+      "papel": "Mentor responsável",
+      "etapa": "Aprovar o cadastro e retirar a solicitação da fila pendente",
+      "rota": "/mentor/users-request",
+      "sha256": "497988d61ca344ab9f0b20987ec318031fe7659ddbc0ae680319dc07e2293182",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "acesso-06-habilitado.png",
+      "papel": "Mentorado habilitado",
+      "etapa": "Entrar com a conta aprovada e acessar a área do mentorado",
+      "rota": "/mentee/",
+      "sha256": "3177e0aed97cfbdbe2b07023b01a4ad33b7d0a4b8b292a68d1eb9964b6874044",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-01-catalogo.png",
+      "papel": "Mentor",
+      "etapa": "Consultar material disponível: 10 unidades",
+      "rota": "/mentor/search-material",
+      "sha256": "e71bad3e7d953f723d9c3119285552e8ee346cd2eb5ad40d17a200be0a69d6ab",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-02-selecao.png",
+      "papel": "Mentor",
+      "etapa": "Selecionar utilizador, grupo, item, quantidade e unidade",
+      "rota": "/mentor/loan/creation",
+      "sha256": "219929d5de047d9f13e7bec66e5a84726a81e19644343cfad1f4525e47906313",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-03-revisao.png",
+      "papel": "Mentor",
+      "etapa": "Conferir produtos selecionados e solicitar",
+      "rota": "/mentor/loan/creation",
+      "sha256": "cb8ae0d0119f9b7c6921da76f36abf4346bd0803f01500635736016bd8ba47e0",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-04-enviado.png",
+      "papel": "Mentor",
+      "etapa": "Solicitação enviada sem redução do estoque",
+      "rota": "/mentor/loan/creation",
+      "sha256": "465097e3b785bf3f2a9b5746eb03b7cd8fbfdec069a94ce87054fc66722d3cb2",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-05-pendente.png",
+      "papel": "Mentor",
+      "etapa": "Consultar o detalhe do empréstimo pendente antes da decisão administrativa",
+      "rota": "/mentor/history/loan?id=701",
+      "sha256": "ec5366202645cac154918e72591461de3c17b02fd5312b8f2a9cd86b9d6f17c7",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-06-analisar.png",
+      "papel": "Administrador",
+      "etapa": "Consultar a fila de empréstimos e decidir",
+      "rota": "/admin/loans-request",
+      "sha256": "415d6263c344840f985e7e740191664b294fce4c6d6e6814371b50dc14cb83f6",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-07-detalhe.png",
+      "papel": "Administrador",
+      "etapa": "Conferir material, quantidade solicitada e solicitante no detalhe",
+      "rota": "/admin/history/loan?id=701",
+      "sha256": "f8a91a010b0140d4f147dc10cd1ffeee96a9f0a1df732f02bd73af15273c40e0",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-08-aprovado.png",
+      "papel": "Administrador",
+      "etapa": "Aprovação registrada e baixa de 2 unidades: saldo 8",
+      "rota": "/admin/all-loans",
+      "sha256": "900d76bbba0bff5bb22d0e16d37f873f5a271350fc948c6dd6dbb3f8bc7a4362",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-09-saldo.png",
+      "papel": "Administrador",
+      "etapa": "Conferir o saldo após aprovação: 8 unidades",
+      "rota": "/admin/search-material",
+      "sha256": "c2c26ea46729395992535bea027b32453408c8c6453e82a462966f626006476b",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-10-devolucao.png",
+      "papel": "Administrador",
+      "etapa": "Abrir a devolução do empréstimo aprovado",
+      "rota": "/admin/return?id=701",
+      "sha256": "59eeb1689b8e26df1d3133c3d63580d4f54b0d188462f857c2a1c38baff25edf",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-11-devolvido.png",
+      "papel": "Administrador",
+      "etapa": "Registrar devolução integral e conferir sua confirmação",
+      "rota": "/admin/return?id=701",
+      "sha256": "afbbc76ae28e9329a9b42cc29249f0033d793f98a9f378ca1ab2f6b544186d77",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-12-reposto.png",
+      "papel": "Administrador",
+      "etapa": "Conferir recomposição do saldo: 10 unidades",
+      "rota": "/admin/search-material",
+      "sha256": "459a00012d4c656f250bab27d66a96eabf74d049b16d41a76f0437606d78f7ec",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    },
+    {
+      "arquivo": "emprestimo-13-historico.png",
+      "papel": "Administrador",
+      "etapa": "Consultar histórico final e data de devolução",
+      "rota": "/admin/history/loan?id=701",
+      "sha256": "017ce42674b92d36d68598d5b12ebd6ad1358404ca5a8d6b401525551de91477",
+      "origem": "Captura Playwright da interface local atual; respostas de API simuladas; dados sintéticos."
+    }
+  ],
+  "chamadas": [
+    {
+      "method": "POST",
+      "endpoint": "Usuarios"
+    },
+    {
+      "method": "POST",
+      "endpoint": "Auth/login"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110/dependentes/aprovacao"
+    },
+    {
+      "method": "PATCH",
+      "endpoint": "Usuarios/dependentes/120/aprovar"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110/dependentes/aprovacao"
+    },
+    {
+      "method": "POST",
+      "endpoint": "Auth/login"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/120"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "System/quantities"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110/dependentes"
+    },
+    {
+      "method": "POST",
+      "endpoint": "Emprestimos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos/701"
+    },
+    {
+      "method": "POST",
+      "endpoint": "Auth/login"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos/701"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos"
+    },
+    {
+      "method": "PATCH",
+      "endpoint": "Emprestimos/aprovar/701"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "System/quantities"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos/701"
+    },
+    {
+      "method": "PATCH",
+      "endpoint": "Emprestimos/devolver/701"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos/701"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "System/quantities"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Emprestimos/701"
+    }
+  ],
+  "chamadasNaoPrevistas": [],
+  "resultadoSimulado": {
+    "cadastro": "Habilitado",
+    "emprestimo": "Aprovado",
+    "devolucaoRegistrada": true,
+    "saldoInicial": 10,
+    "saldoAprovado": 8,
+    "saldoFinal": 10
+  },
+  "animacoes": [
+    {
+      "arquivo": "fluxo-acesso.gif",
+      "quadros": [
+        "acesso-01-login.png",
+        "acesso-02-cadastro.png",
+        "acesso-03-pendente.png",
+        "acesso-04-analisar.png",
+        "acesso-05-aprovado.png",
+        "acesso-06-habilitado.png"
+      ],
+      "duracaoPorQuadroMs": 2200,
+      "origem": "Sequência de capturas de interações da interface local; não é vídeo contínuo nem execução de backend real.",
+      "sha256": "f29be96c1cecb67e36cca4bb33d63a2793761ecd082d48a672a4e8a4bef51895"
+    },
+    {
+      "arquivo": "fluxo-emprestimo.gif",
+      "quadros": [
+        "emprestimo-01-catalogo.png",
+        "emprestimo-02-selecao.png",
+        "emprestimo-03-revisao.png",
+        "emprestimo-04-enviado.png",
+        "emprestimo-05-pendente.png",
+        "emprestimo-06-analisar.png",
+        "emprestimo-07-detalhe.png",
+        "emprestimo-08-aprovado.png",
+        "emprestimo-09-saldo.png",
+        "emprestimo-10-devolucao.png",
+        "emprestimo-11-devolvido.png",
+        "emprestimo-12-reposto.png",
+        "emprestimo-13-historico.png"
+      ],
+      "duracaoPorQuadroMs": 2200,
+      "origem": "Sequência de capturas de interações da interface local; não é vídeo contínuo nem execução de backend real.",
+      "sha256": "b7ee7aea7be490329fa40188d61cc1a5babd622aae1b30ea44b60456343c3a79"
+    }
+  ]
+}

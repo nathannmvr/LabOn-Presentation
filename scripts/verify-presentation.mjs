@@ -39,7 +39,22 @@ try {
             return { viewport: innerHeight, controlsBottom: controls.bottom, documentWidth: document.documentElement.scrollWidth, viewportWidth: innerWidth, contentHeight: activeSlide.scrollHeight, frameHeight: activeSlide.clientHeight }
           })
           if (bounds.documentWidth > viewport.width + 1 || bounds.controlsBottom > viewport.height + 1) failures.push({ slide, width: viewport.width, ...bounds })
+          if (viewport.width > 640 && (report.slides[slide - 1]?.flow || report.slides[slide - 1]?.table)) {
+            const visualBounds = await active.locator('.slide-visual').evaluate(el => ({
+              top: el.getBoundingClientRect().top, bottom: el.getBoundingClientRect().bottom,
+              contentHeight: el.scrollHeight, height: el.clientHeight,
+            }))
+            if (visualBounds.top < 80 || visualBounds.bottom > viewport.height - 65 || visualBounds.contentHeight > visualBounds.height + 2) failures.push({ slide, width: viewport.width, visualBounds })
+          }
           await page.screenshot({ path: path.join(output, `${viewport.width === 1440 ? 'desktop' : 'mobile'}-${slide}.png`), fullPage: true, animations: 'disabled' })
+          if (viewport.width <= 640) {
+            const article = active.locator('article')
+            const scrollable = await article.evaluate(el => el.scrollHeight > el.clientHeight + 2)
+            if (scrollable) {
+              await article.evaluate(el => { el.scrollTop = el.scrollHeight })
+              await page.screenshot({ path: path.join(output, `mobile-${slide}-bottom.png`), animations: 'disabled' })
+            }
+          }
         }
       }
     }
@@ -74,6 +89,21 @@ try {
       const response = await page.request.get(new URL(document, baseURL).href)
       assert.equal(response.status(), 200)
       assert.ok((await response.text()).startsWith('# '), `Missing evidence document: ${document}`)
+    }
+    const animatedIndexes = latest.slides.flatMap((slide, index) => slide.image?.animated ? [index] : [])
+    for (const animatedIndex of animatedIndexes) {
+      const animatedImage = latest.slides[animatedIndex].image
+      await page.goto(`${baseURL}/?week=${latest.id}&slide=${animatedIndex + 1}`)
+      const active = page.locator('.slide-page[aria-hidden="false"]')
+      await expect(active.locator('img')).toHaveAttribute('src', animatedImage.poster)
+      await active.getByRole('button', { name: 'Reproduzir GIF', exact: true }).focus()
+      await page.keyboard.press('Space')
+      await expect(active.getByRole('button', { name: 'Parar GIF', exact: true })).toHaveAttribute('aria-pressed', 'true')
+      await expect(active.locator('img')).toHaveAttribute('src', animatedImage.src)
+      await active.getByRole('button', { name: 'Parar GIF', exact: true }).click()
+      await expect(active.locator('img')).toHaveAttribute('src', animatedImage.poster)
+      await page.keyboard.press('ArrowRight')
+      await expect(page).toHaveURL(new RegExp(`slide=${animatedIndex + 2}$`))
     }
     await page.close()
   }

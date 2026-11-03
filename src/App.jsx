@@ -29,6 +29,8 @@ function App() {
 
   useEffect(() => {
     const onKey = (event) => {
+      if (event.target.closest('input, select, textarea, [contenteditable="true"]')) return
+      if ([' ', 'Enter'].includes(event.key) && event.target.closest('button, a')) return
       if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(event.key)) {
         event.preventDefault(); goTo(current + 1)
       }
@@ -72,7 +74,7 @@ function App() {
         <div className="report-selector">
           <Layers3 size={15} />
           <select value={report.id} onChange={changeReport} aria-label="Selecionar semana">
-            {reports.map((item) => <option key={item.id} value={item.id}>Semana {item.sequence} · {item.period}</option>)}
+            {reports.map((item) => <option key={item.id} value={item.id}>Semana {item.sequence} · {item.selectorPeriod ?? item.period}</option>)}
           </select>
         </div>
         <div className="topbar-meta"><Presentation size={15} /><span>Weekly report</span></div>

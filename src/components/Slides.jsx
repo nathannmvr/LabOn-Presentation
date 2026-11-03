@@ -1,5 +1,6 @@
 import { ArrowRight, Check, ExternalLink, GitBranch } from 'lucide-react'
 import { ScreenshotFrame } from './ScreenshotFrame.jsx'
+import { BusinessTable, FlowDiagram } from './BusinessVisuals.jsx'
 
 function EvidencePanel({ evidence }) {
   return (
@@ -53,7 +54,7 @@ export function CoverSlide({ report }) {
 export function DetailSlide({ slide }) {
   const Icon = slide.icon
   return (
-    <article className={`slide slide--detail accent-${slide.accent}`}>
+    <article className={`slide slide--detail accent-${slide.accent}${slide.flow || slide.table ? ' slide--business' : ''}`}>
       <div className="slide-copy">
         <div className="slide-kicker">
           <span className="slide-index">{slide.index}</span>
@@ -84,7 +85,7 @@ export function DetailSlide({ slide }) {
         )}
       </div>
       <div className="slide-visual">
-        {slide.evidence ? <EvidencePanel evidence={slide.evidence} /> : slide.images ? (
+        {slide.flow ? <FlowDiagram flow={slide.flow} /> : slide.table ? <BusinessTable table={slide.table} /> : slide.evidence ? <EvidencePanel evidence={slide.evidence} /> : slide.images ? (
           <div className={`screenshot-comparison${slide.balancedImages ? ' screenshot-comparison--balanced' : ''}`}>
             {slide.images.map((image) => (
               <figure key={image.src}>
@@ -95,7 +96,7 @@ export function DetailSlide({ slide }) {
           </div>
         ) : <ScreenshotFrame image={slide.image} />}
         <span className="visual-caption"><i /> {slide.caption ?? 'Evidência verificável da entrega'}</span>
-        {!slide.evidence && <span className="screenshot-hint">Toque ou clique no print para ampliar</span>}
+        {!slide.evidence && !slide.flow && !slide.table && <span className="screenshot-hint">Toque ou clique na captura para ampliar</span>}
         {slide.source && <a className="evidence-source" href={slide.source.href} target="_blank" rel="noreferrer">{slide.source.label} <ExternalLink size={14} /></a>}
       </div>
     </article>
@@ -108,6 +109,7 @@ export function ClosingSlide({ report }) {
       <div className="closing-message">
         <h2>{report.closing.title}</h2>
         <span className="closing-rule" />
+        {report.closing.text && <p className="closing-description">{report.closing.text}</p>}
       </div>
       <div className="closing-footer"><span>LAB</span><strong>ON</strong><i /></div>
     </article>

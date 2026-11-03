@@ -1,8 +1,47 @@
 # LabOn Presentation
 
+## Entrega de 15/10 a 04/11/2026
+
+A nona entrega abre por padrão ou em `?week=2026-11-04`. O período começa no
+dia seguinte ao fim da entrega anterior, em 14/10. O conteúdo foi preparado em
+03/11 para apresentação até 04/11, sem afirmar resultados de uma data futura.
+
+São 42 slides, incluindo capa e encerramento. O primeiro bloco apresenta o
+PRD InterLab como planejamento para validação com o cliente, com oito
+fluxogramas e tabelas de regras, permissões, estoque e exceções. Uma cópia
+integral do PRD acompanha a apresentação para consulta.
+
+O segundo bloco divide o sistema atual em seis fluxos e demonstra dois:
+cadastro/aprovação de acesso e empréstimo/devolução. Os 19 prints e dois GIFs
+mostram a interface atual com dados sintéticos e respostas de API simuladas,
+condição indicada em cada slide. Os GIFs são sequências de capturas com
+reprodução e parada explícitas. Os originais podem ser ampliados.
+
+Conteúdo em `src/data/report-2026-11-04.js`. Consulte o
+[roteiro dos fluxos](public/reports/2026-11-04/fluxos-atuais.md), as
+[fontes e limites](public/reports/2026-11-04/validacao.md) e a
+[procedência das capturas](public/screenshots/2026-11-04/README.md).
+
+Para reproduzir as mídias com a build de produção do frontend local em
+`127.0.0.1:4173` (usar `npm run build` e `npm run preview`, não o servidor de
+desenvolvimento):
+
+```bash
+node scripts/capture-2026-11-04.mjs
+python scripts/animate-2026-11-04.py
+```
+
+Para executar e conferir a apresentação, use os comandos abaixo e
+`node scripts/verify-presentation.mjs` com o servidor em `127.0.0.1:5174`.
+
+Verificação local: lint e build aprovados; nove reports e 109 slides por
+resolução, em 1440 × 900 e 375 × 812, com `layoutFindings: []`. Os dois GIFs
+têm reprodução e parada verificadas por teclado. A revisão visual confirmou
+a correção da legibilidade das três alternativas no celular.
+
 ## Entrega de 08/10 a 14/10/2026
 
-A oitava entrega abre por padrão ou em `?week=2026-10-14`. São dez slides,
+A oitava entrega está em `?week=2026-10-14`. São dez slides,
 incluindo capa e encerramento, sobre as cinco correções de segurança, testes,
 documentação e publicação da release 2.7.4. O conteúdo usa a identidade visual
 e os componentes existentes.
