@@ -9,7 +9,7 @@ Conferência em **10/11/2026**. Extensão ordinária da apresentação existente
 - `validacao.md`, `fluxo-materiais.md`, o manifesto `public/screenshots/2026-11-11/capturas.json` e a procedência adjacente do GIF.
 - Montagens finais `.impeccable/review/desktop-montage-20261111.png` e `mobile-montage-20261111.png`, inspecionadas nesta conferência.
 
-O período é **05 a 11/11/2026**, preparado em **10/11** sem antecipar resultados do dia seguinte. São **12 slides**: capa, três da entrega de segurança, sete de Materiais e estoque (visão geral e seis passos) e encerramento.
+O período é **05 a 11/11/2026**, preparado em **10/11** sem antecipar resultados do dia seguinte. A versão final tem **10 slides**: capa, um da entrega de segurança, sete de Materiais e estoque (visão geral e seis passos) e encerramento. Após a revisão inicial, dois slides do resumo foram removidos a pedido do usuário; o fluxo e os componentes foram preservados.
 
 ## Continuidade visual
 
@@ -23,9 +23,14 @@ As montagens confirmam a continuidade com o report anterior. O único achado mat
 
 Os slides de Materiais declaram **interface real local, API simulada e dados sintéticos** e vinculam o roteiro. Não alegam operação em produção, persistência real ou validação da autorização do backend. O manifesto registra revisão, ambiente, rotas, etapas e hashes das seis capturas e do GIF. A origem dos PNGs está embutida; a sequência animada tem procedência em `fluxo-materiais.gif.json` e não é apresentada como gravação contínua.
 
-Na integração, o responsável executou lint e build com sucesso e `scripts/verify-presentation.mjs`, cuja saída foi `{"reports":10,"slidesPerViewport":121,"viewports":2,"layoutFindings":[]}` para **1440 × 900 e 375 × 812**. Informou também reprodução/parada do GIF por teclado, detector sem achados e conferência de metadados em seis rasters, sem origem ausente. Esses resultados são evidências recebidas da integração; este passe documental leu fontes e inspecionou as montagens, sem executar navegador ou testes.
+Na revisão inicial de 12 slides, o responsável executou lint e build com sucesso e `scripts/verify-presentation.mjs`, cuja saída foi `{"reports":10,"slidesPerViewport":121,"viewports":2,"layoutFindings":[]}` para **1440 × 900 e 375 × 812**. Informou também reprodução/parada do GIF por teclado, detector sem achados e conferência de metadados em seis rasters, sem origem ausente. Esses resultados são evidências recebidas da integração; este passe documental leu fontes e inspecionou as montagens, sem executar navegador ou testes.
 
 ## Limites preservados
+
+Após a redução solicitada para um slide de entrega, lint e build passaram
+novamente. O verificador percorreu dez reports e 119 slides por resolução,
+em desktop e celular, com `layoutFindings: []`. A sequência mantém o slide
+de segurança seguido imediatamente pela visão geral de Materiais e estoque.
 
 O sidecar de design já estava desatualizado antes desta extensão, conforme registro anterior; sua data de geração e cobertura parcial confirmam o drift preexistente. A escala de capa documentada também difere do CSS atual. Nenhuma dessas diferenças foi promovida a nova regra nem corrigida neste escopo.
 

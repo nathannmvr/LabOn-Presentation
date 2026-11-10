@@ -5,10 +5,10 @@
 A décima entrega abre por padrão ou em `?week=2026-11-11`. Foi preparada em
 10/11 para apresentação em 11/11, sem antecipar resultados de uma data futura.
 
-São 12 slides: capa, **três slides da entrega de segurança**, sete slides do
+São 10 slides: capa, **um slide da entrega de segurança**, sete slides do
 fluxo 3 e encerramento. O resumo registra a integração das correções à main,
-31 achados de CodeQL e sete alertas Dependabot resolvidos, validação e release
-2.7.5. As duas sugestões de AI findings continuam identificadas como pendentes.
+31 achados de CodeQL e sete alertas Dependabot resolvidos. As duas sugestões
+de AI findings continuam identificadas como pendentes.
 
 O terceiro dos seis fluxos é **Materiais e estoque**: cadastrar uma vidraria,
 consultar o catálogo, editar e conferir o saldo. São seis capturas e um GIF da
@@ -29,7 +29,7 @@ node scripts/capture-2026-11-11.mjs
 python scripts/animate-2026-11-11.py
 ```
 
-Verificação local: lint e build aprovados; dez reports e 121 slides por
+Verificação local: lint e build aprovados; dez reports e 119 slides por
 resolução, em 1440 × 900 e 375 × 812, com `layoutFindings: []`. O GIF tem
 reprodução e parada verificadas por teclado. A identidade visual e os
 componentes existentes foram preservados.

@@ -1,4 +1,4 @@
-import { Boxes, ClipboardCheck, FilePlus2, PackageCheck, Pencil, Search, ShieldCheck } from 'lucide-react'
+import { Boxes, FilePlus2, PackageCheck, Pencil, Search, ShieldCheck } from 'lucide-react'
 
 const assets = '/screenshots/2026-11-11'
 const validation = '/reports/2026-11-11/validacao.md'
@@ -15,7 +15,7 @@ const material = (id, step, title, description, points, image, icon) => ({
 
 const slides = [
   {
-    id: 'seguranca-main', section: 'Entrega da semana · 1 de 3', icon: ShieldCheck, accent: 'mint',
+    id: 'seguranca-main', section: 'Entrega da semana', icon: ShieldCheck, accent: 'mint',
     title: 'Segurança conferida na main',
     description: 'As correções chegaram à versão estável. A nova análise confirmou o resultado no código integrado.',
     points: ['31 achados de CodeQL corrigidos', '7 alertas de dependências resolvidos', 'Standard findings: duas notas Excellent'],
@@ -32,42 +32,6 @@ const slides = [
       footer: 'As 2 sugestões de AI findings pertencem a uma lista separada e continuam pendentes.',
     },
     caption: 'Resultado do commit 09d9b41. Nenhuma regra foi desativada ou alerta dispensado.', source,
-  },
-  {
-    id: 'correcoes-acesso', section: 'Entrega da semana · 2 de 3', icon: ShieldCheck, accent: 'mint',
-    title: 'Entradas verificadas antes da operação',
-    description: 'A manutenção reforçou chamadas de produtos e empréstimos, notificações e as imagens de execução.',
-    points: ['Identificadores inválidos são recusados antes da chamada HTTP', 'A identidade é conferida antes dos IDs de notificações', 'Runtime corrigido e construção dos E2E estabilizada'],
-    table: {
-      title: 'O que mudou no código', columns: ['Frente', 'Comportamento entregue'],
-      rows: [
-        ['Produtos e empréstimos', 'URLs aceitam somente identificadores inteiros positivos válidos.'],
-        ['Notificações', 'A identidade autenticada é consultada antes da validação dos IDs.'],
-        ['Dependências', 'Atualizações de follow-redirects, Zod, Vite, Vitest e minimatch.'],
-        ['Execução e testes', 'ASP.NET 8.0.34, SDK 8.0.428 e builder Buildx isolado nos E2E.'],
-      ],
-      note: 'Também foram simplificadas condições, filtros e capturas de falhas operacionais identificadas pelo CodeQL.',
-    },
-    caption: 'PR #458 integrado em develop; promoção para main pelo PR #459.',
-    source: { href: `${repository}/pull/458`, label: 'Ver correções, commits e testes de regressão' },
-  },
-  {
-    id: 'validacao-integrada', section: 'Entrega da semana · 3 de 3', icon: ClipboardCheck, accent: 'mint',
-    title: 'Correções testadas antes de publicar',
-    description: 'A entrega passou pelas verificações de qualidade, integração e segurança antes da promoção para main.',
-    points: ['18 checks aprovados no PR de implementação', 'Scans de frontend e backend em amd64 e arm64 aprovados', 'Release 2.7.5 publicada em 10/11'],
-    evidence: {
-      badge: 'Container CI · PR #458', headline: '18', subheadline: 'checks aprovados na revisão',
-      href: `${repository}/actions/runs/42881776130`,
-      items: [
-        { label: 'Testes frontend', value: '870 aprovados' },
-        { label: 'Testes backend', value: '438 aprovados' },
-        { label: 'E2E de autenticação e interface', value: '239 aprovados' },
-        { label: 'E2E de segurança no navegador', value: '5 aprovados' },
-      ],
-      footer: 'Auditorias npm/NuGet aprovadas. Trivy sem HIGH/CRITICAL nos quatro scans de imagens.',
-    },
-    caption: 'Resultados verificados em 10/11; o período da apresentação termina em 11/11.', source,
   },
   material('materiais-visao', 'jornada completa', 'Materiais e estoque',
     'O terceiro fluxo do mapa funcional acompanha o cadastro e a edição de um material pelo Administrador.',

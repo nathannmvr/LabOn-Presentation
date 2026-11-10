@@ -4,7 +4,7 @@ Preparada em **10/11/2026**, para apresentação em **11/11/2026**. O recorte co
 
 ## Composição
 
-A semana 10 possui 12 slides: capa, **três slides da entrega**, sete slides do fluxo 3 (uma visão animada e seis passos) e encerramento. O limite de três slides foi aplicado ao resumo da entrega, conforme confirmado pelo usuário; a demonstração ocupa slides adicionais.
+A semana 10 possui 10 slides: capa, **um slide da entrega**, sete slides do fluxo 3 (uma visão animada e seis passos) e encerramento. A pedido do usuário, o resumo mantém somente “Segurança conferida na main”, seguido imediatamente pelos slides do fluxo, preservados integralmente.
 
 O estilo, os controles, a ampliação de capturas e a reprodução/parada dos GIFs são os já utilizados pelo LabOn Presentation. As semanas anteriores foram preservadas.
 
@@ -26,7 +26,7 @@ As consultas de segurança são preservadas em [seguranca.json](seguranca.json),
 
 As **duas sugestões em AI findings** pertencem a uma lista separada e continuam pendentes. Por isso o texto não afirma que todas as áreas do GitHub Security estão vazias.
 
-## Correções resumidas nos três slides
+## Detalhamento complementar da entrega
 
 - Validação de identificadores inteiros positivos Int32 nas URLs de produtos e empréstimos, inclusive mutações e identificador do aprovador.
 - Consulta da identidade autenticada antes da validação do corpo em notificações, preservando a autorização por notificação no serviço.
