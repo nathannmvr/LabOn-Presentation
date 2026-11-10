@@ -1,0 +1,37 @@
+{
+  "periodo": "05/11 a 11/11/2026",
+  "verificadoEm": "2026-11-10T19:53:34.4028957Z",
+  "referencia": "refs/heads/main",
+  "commit": "09d9b419d2df21cbc3c27e0704fa90d9ef621777",
+  "codeScanningAbertos": 0,
+  "dependabotAbertos": 0,
+  "analises": [
+    {
+      "achados": 0,
+      "categoria": "codeql-csharp",
+      "commit": "09d9b419d2df21cbc3c27e0704fa90d9ef621777",
+      "concluidaEm": "2026-11-10T19:35:29Z",
+      "ferramenta": "CodeQL"
+    },
+    {
+      "achados": 0,
+      "categoria": "codeql-javascript-typescript",
+      "commit": "09d9b419d2df21cbc3c27e0704fa90d9ef621777",
+      "concluidaEm": "2026-11-10T19:34:15Z",
+      "ferramenta": "CodeQL"
+    }
+  ],
+  "standardFindings": {
+    "manutenibilidade": 0,
+    "nota": "Excellent",
+    "origem": "Conferência do painel de Standard findings em 10/11/2026",
+    "confiabilidade": 0
+  },
+  "aiFindingsPendentes": 2,
+  "release": {
+    "publishedAt": "2026-11-10T19:40:28Z",
+    "tagName": "2.7.5",
+    "targetCommitish": "09d9b419d2df21cbc3c27e0704fa90d9ef621777",
+    "url": "https://github.com/ifpebj-ti/lab-solos/releases/tag/2.7.5"
+  }
+}

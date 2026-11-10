@@ -1,0 +1,159 @@
+{
+  "data": "2026-11-10",
+  "interface": "lab-solos 09d9b419d2df21cbc3c27e0704fa90d9ef621777",
+  "modoInterface": "Build de produção local, servida por vite preview",
+  "arquivosInterface": [
+    "/assets/index-D8xGbhlK.js",
+    "/assets/index-CMI32W4H.css"
+  ],
+  "ambiente": "http://127.0.0.1:4173",
+  "natureza": "Interface real compilada, API simulada em memória e dados sintéticos. Não comprova persistência do backend nem operação em produção.",
+  "capturas": [
+    {
+      "arquivo": "materiais-01-tipo.png",
+      "etapa": "Escolher Vidrarias em Produtos > Adicionar",
+      "papel": "Administrador",
+      "rota": "/admin/insert",
+      "sha256": "befbd76772dd9382a98ecf3863832a8c09b8fe7a85835feff7d267088fef8a12"
+    },
+    {
+      "arquivo": "materiais-02-dados.png",
+      "etapa": "Revisar os dados de cadastro antes de adicionar",
+      "papel": "Administrador",
+      "rota": "/admin/insert",
+      "sha256": "21c2cd76ca59cf8bbaee1ce3d75e3192ead7eb2c6f0542e59d9a71cc768bec92"
+    },
+    {
+      "arquivo": "materiais-03-catalogo.png",
+      "etapa": "Confirmar o cadastro na pesquisa: saldo 10 unidades",
+      "papel": "Administrador",
+      "rota": "/admin/search-material",
+      "sha256": "84739b10e04ebab2d7c14ad486973685b9afbf3cbbe1c1641a880553e96fb2b0"
+    },
+    {
+      "arquivo": "materiais-04-detalhe.png",
+      "etapa": "Conferir os dados na verificação do material",
+      "papel": "Administrador",
+      "rota": "/admin/verification?id=901",
+      "sha256": "caf486d5cdf000926ab70b8c207347a85184e0ea747ab17599ab5c53d6a8ad0a"
+    },
+    {
+      "arquivo": "materiais-05-edicao.png",
+      "etapa": "Revisar os novos valores no modal de edição",
+      "papel": "Administrador",
+      "rota": "/admin/verification?id=901",
+      "sha256": "6af0b7e8c4b545c68c00bc094b6687dc45b31448f956ad86d80c4dc74e160f22"
+    },
+    {
+      "arquivo": "materiais-06-confirmacao.png",
+      "etapa": "Recarregar a pesquisa e confirmar o saldo simulado de 12 unidades",
+      "papel": "Administrador",
+      "rota": "/admin/search-material",
+      "sha256": "a4acfd4a4dee291430014994126a14dd5a216cf445b8b861b652cb9c59ecc6da"
+    }
+  ],
+  "chamadas": [
+    {
+      "method": "POST",
+      "endpoint": "Auth/login"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "POST",
+      "endpoint": "produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "System/quantities"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos/901"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos/901/historico-saida"
+    },
+    {
+      "method": "PATCH",
+      "endpoint": "Produtos/901"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos/901"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "System/quantities"
+    }
+  ],
+  "errosDePagina": [],
+  "chamadasNaoPrevistas": [],
+  "resultadoSimulado": {
+    "produtoId": 901,
+    "quantidadeInicial": 10,
+    "quantidadeFinal": 12,
+    "minimoInicial": 2,
+    "minimoFinal": 3,
+    "localizacaoFinal": "Armário B · prateleira 1"
+  },
+  "animacoes": [
+    {
+      "arquivo": "fluxo-materiais.gif",
+      "quadros": [
+        "materiais-01-tipo.png",
+        "materiais-02-dados.png",
+        "materiais-03-catalogo.png",
+        "materiais-04-detalhe.png",
+        "materiais-05-edicao.png",
+        "materiais-06-confirmacao.png"
+      ],
+      "duracaoPorQuadroMs": 2200,
+      "origem": "Sequência de capturas de interações da interface local; não é vídeo contínuo nem execução de backend real.",
+      "sha256": "fd2ead91f932a3113d22ab0af27e2e3bc999df6779494cdda9d748de75029cb8"
+    }
+  ]
+}

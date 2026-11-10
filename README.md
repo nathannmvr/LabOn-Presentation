@@ -1,5 +1,39 @@
 # LabOn Presentation
 
+## Entrega de 05/11 a 11/11/2026
+
+A décima entrega abre por padrão ou em `?week=2026-11-11`. Foi preparada em
+10/11 para apresentação em 11/11, sem antecipar resultados de uma data futura.
+
+São 12 slides: capa, **três slides da entrega de segurança**, sete slides do
+fluxo 3 e encerramento. O resumo registra a integração das correções à main,
+31 achados de CodeQL e sete alertas Dependabot resolvidos, validação e release
+2.7.5. As duas sugestões de AI findings continuam identificadas como pendentes.
+
+O terceiro dos seis fluxos é **Materiais e estoque**: cadastrar uma vidraria,
+consultar o catálogo, editar e conferir o saldo. São seis capturas e um GIF da
+interface real local, com dados sintéticos e respostas de API simuladas,
+condição indicada nos slides. Os dois fluxos apresentados anteriormente
+permanecem na entrega de 04/11.
+
+Conteúdo em `src/data/report-2026-11-11.js`. Consulte as
+[fontes e limites](public/reports/2026-11-11/validacao.md), o
+[roteiro do fluxo](public/reports/2026-11-11/fluxo-materiais.md) e a
+[procedência das capturas](public/screenshots/2026-11-11/README.md).
+
+Para reproduzir as mídias com a build de produção do frontend local em
+`127.0.0.1:4173`:
+
+```bash
+node scripts/capture-2026-11-11.mjs
+python scripts/animate-2026-11-11.py
+```
+
+Verificação local: lint e build aprovados; dez reports e 121 slides por
+resolução, em 1440 × 900 e 375 × 812, com `layoutFindings: []`. O GIF tem
+reprodução e parada verificadas por teclado. A identidade visual e os
+componentes existentes foram preservados.
+
 ## Entrega de 15/10 a 04/11/2026
 
 A nona entrega abre por padrão ou em `?week=2026-11-04`. O período começa no

@@ -1,4 +1,5 @@
 import { report20261104 } from './report-2026-11-04.js'
+import { report20261111 } from './report-2026-11-11.js'
 import {
   BookOpenText,
   Boxes,
@@ -437,4 +438,5 @@ export const reports = [
   report20261007,
   report20261014,
   report20261104,
+  report20261111,
 ]
