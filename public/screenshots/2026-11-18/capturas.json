@@ -1,0 +1,129 @@
+{
+  "data": "2026-11-17",
+  "interface": "lab-solos c642854c44ff36709e75aeb3f25a3d865640eb8c + alterações locais não commitadas",
+  "modoInterface": "Build local de produção servida por vite preview; chamadas de API simuladas em memória",
+  "arquivosInterface": [
+    "/assets/index-DteBP77e.js",
+    "/assets/index-gIlDJaOM.css"
+  ],
+  "ambiente": "http://127.0.0.1:4173",
+  "natureza": "Interface real do frontend no worktree atual, dados sintéticos e API simulada; não comprova persistência no backend ou operação em produção.",
+  "capturas": [
+    {
+      "arquivo": "consulta-01-catalogo.png",
+      "etapa": "Filtrar o catálogo por tipo e localizar Ácido cítrico",
+      "papel": "Mentor",
+      "rota": "/mentor/search-material",
+      "sha256": "d7a70212ba509d167ba797f429b2537cdd4fc29d522b13878ca31e816df71abb"
+    },
+    {
+      "arquivo": "consulta-02-detalhe.png",
+      "etapa": "Consultar as informações disponíveis ao perfil",
+      "papel": "Mentor",
+      "rota": "/mentor/verification?id=901",
+      "sha256": "2b947982e63076f684c01d7a93aa6937c2599240ea203777065504484077ecb1"
+    },
+    {
+      "arquivo": "consulta-03-historico.png",
+      "etapa": "Consultar movimentações incluídas no escopo do perfil",
+      "papel": "Mentor",
+      "rota": "/mentor/verification?id=901",
+      "sha256": "afa6eef118f2ab8c2abbbba76b1f076b4f727c7afc25bb1d1b5dcd341da0ccc4"
+    },
+    {
+      "arquivo": "consulta-04-alertas.png",
+      "etapa": "Acompanhar um alerta de estoque e um de validade",
+      "papel": "Administrador",
+      "rota": "/admin/follow-up",
+      "sha256": "45c85fc8b72fc7b34943cd377062c3d71e67121e88759f8ac7d59ea582d7d21a"
+    }
+  ],
+  "chamadas": [
+    {
+      "method": "POST",
+      "endpoint": "Auth/login"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/110"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos"
+    },
+    {
+      "method": "GET",
+      "endpoint": "System/quantities"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos/901"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos/901/historico-saida"
+    },
+    {
+      "method": "POST",
+      "endpoint": "Auth/login"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/minhas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Notificacoes/count-nao-lidas"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Usuarios/101"
+    },
+    {
+      "method": "GET",
+      "endpoint": "Produtos/emAlerta"
+    }
+  ],
+  "chamadasNaoPrevistas": [],
+  "errosDePagina": [],
+  "resultadoSimulado": {
+    "pesquisa": {
+      "papel": "Mentor",
+      "material": "Ácido cítrico",
+      "filtro": "Químicos"
+    },
+    "detalhe": {
+      "produtoId": 901,
+      "totalEmprestimos": 2,
+      "totalQuantidadeEmprestada": 8,
+      "unidade": "g"
+    },
+    "alertas": {
+      "papel": "Administrador",
+      "estoqueAbaixoDoMinimo": true,
+      "validadeVencida": true
+    }
+  },
+  "animacoes": [
+    {
+      "arquivo": "fluxo-consulta.gif",
+      "quadros": [
+        "consulta-01-catalogo.png",
+        "consulta-02-detalhe.png",
+        "consulta-03-historico.png",
+        "consulta-04-alertas.png"
+      ],
+      "duracaoPorQuadroMs": 2200,
+      "origem": "Sequência animada de capturas da interface local; não é vídeo contínuo nem execução real de backend.",
+      "sha256": "fe26087f90659fc15c2a0e375932072555b10b570ce90ea440d8aaa3287aa05f"
+    }
+  ]
+}

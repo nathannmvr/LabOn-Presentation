@@ -37,13 +37,16 @@ export function CoverSlide({ report }) {
         <h1>{report.title.split('\n').map((line) => <span key={line}>{line}</span>)}</h1>
       </div>
       <div className="cover-stats">
-        {report.stats.map((stat) => (
-          <div className="cover-stat" key={stat.label}>
-            <strong>{stat.value.split(' ')[0]}</strong>
-            <span>{stat.value.includes('E2E') ? 'testes E2E' : stat.value.split(' ').slice(1).join(' ') || stat.label}</span>
-            <small>{stat.detail}</small>
-          </div>
-        ))}
+        {report.stats.map((stat) => {
+          const metric = stat.value.split(' ')[0]
+          return (
+            <div className="cover-stat" key={stat.label}>
+              <strong style={{ '--metric-size': `${230 / metric.length}cqw` }}>{metric}</strong>
+              <span>{stat.value.includes('E2E') ? 'testes E2E' : stat.value.split(' ').slice(1).join(' ') || stat.label}</span>
+              <small>{stat.detail}</small>
+            </div>
+          )
+        })}
       </div>
       <p className="cover-period">{report.id === '2026-09-30' ? '16 – 30 setembro 2026' : report.period}</p>
       <p className="cover-summary">{report.summary}</p>
